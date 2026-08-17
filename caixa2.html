@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa Eletrônico - 24 Horas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Caixa 24Hr</h1>
+    </header>
+
+    <section>
+        <h2 id="saldo">SALDO R$: 0,00</h2>
+    </section>
+
+    <br>
+
+    <div>
+        <input type="number" id="valorDeposito" placeholder="Digite seu depósito">
+        <br>
+        <button onclick="meuCaixa.depositar()">Depositar</button>
+    </div>
+    
+    <br>
+
+    <div>
+        <input type="number" id="valorSaque" placeholder="Digite seu saque">
+        <br>
+        <button onclick="meuCaixa.sacar()">Sacar</button>
+    </div>
+    <br>
+    <p id="erro"></p>
+    <script src="scripts.js"></script>
+</body>
+</html>
