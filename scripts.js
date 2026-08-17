@@ -2,11 +2,6 @@
 class contaBancaria{
     //propriedade privada para saldo
     #saldo = 0;
-    //definindo construtor
-    constructor(){
-        //propriedades(atributos) da classe
-        this.#saldo;
-    }
     //métodos
     //deposita valor a propriedade privada
     deposito(valor){
