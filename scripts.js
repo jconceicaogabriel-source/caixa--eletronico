@@ -27,27 +27,27 @@ class caixaEletronico{
         this.conta = conta;
     }
     depositar(){
-        const valorDps = Number(document.getElementById("valorDeposito").value);
+        const valorDps = Number(document.querySelector("#valorDeposito").value);
         if(valorDps > 0){
             this.conta.deposito(valorDps);
             this.mostrarSaldo(this.conta.saldo);
         }
     }
     sacar(){
-        const valorScr = Number(document.getElementById("valorSaque").value);
+        const valorScr = Number(document.queySelector("#valorSaque").value);
         if(valorScr > 0){
             if(this.conta.verificaSaldo(valorScr)){
             this.conta.saque(valorScr);
             this.mostrarSaldo(this.conta.saldo);
             }else{
-            document.getElementById("erro").textContent = "Saldo insuficiente!";
+            document.querySelector("#erro").textContent = "Saldo insuficiente!";
         }
     }
 }
     mostrarSaldo(saldo){
-        document.getElementById("saldo").textContent = `SALDO R$: ${saldo}`;
-        document.getElementById("valorDeposito").value = '';
-        document.getElementById("valorSaque").value = '';
+        document.querySelector("#saldo").textContent = `SALDO R$: ${saldo}`;
+        document.querySelector("#valorDeposito").value = '';
+        document.querySelector("#valorSaque").value = '';
     }
     }
     const minhaConta = new contaBancaria();
